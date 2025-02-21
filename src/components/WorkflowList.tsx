@@ -181,7 +181,7 @@ export function WorkflowList({ onCreateNew, onEdit }: WorkflowListProps) {
           </section>
         ) : workflows.length === 0 ? (
           <section className="flex flex-col items-center justify-center py-16">
-            <div className="text-center">
+            <div className="flex flex-col items-center justify-center text-center">
               <h2 className="text-2xl font-bold mb-2">{t('workflow.list.empty.title')}</h2>
               <p className="text-gray-600 mb-6">{t('workflow.list.empty.desc')}</p>
               <button

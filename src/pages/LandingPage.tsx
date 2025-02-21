@@ -20,7 +20,7 @@ export function LandingPage() {
             <a href="#features" className="text-gray-600 hover:text-gray-900">{t('nav.features')}</a>
             <a href="#pricing" className="text-gray-600 hover:text-gray-900">{t('nav.pricing')}</a>
             <LanguageSelector />
-            <Link to="/app" className="px-4 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
+            <Link to="/app-signin" className="px-4 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
               {t('nav.signin')}
             </Link>
             <Link to="/app" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
@@ -46,12 +46,12 @@ export function LandingPage() {
             >
               {t('hero.startBuilding')} <ArrowRight className="w-5 h-5" />
             </Link>
-            <a
-              href="#demo"
+            <Link
+              to="/demo"
               className="w-full md:w-auto px-8 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 flex items-center justify-center gap-2"
             >
               {t('hero.watchDemo')}
-            </a>
+              </Link>
           </div>
         </div>
       </section>
