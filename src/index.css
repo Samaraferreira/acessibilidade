@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 16px;
+}
+
+/* Node Panel Custom Scrollbar */
+.node-panel-scroll {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.node-panel-scroll::-webkit-scrollbar {
+  width: 2px;
+}
+
+.node-panel-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.node-panel-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.3);
+  border-radius: 1px;
+}
+
+.node-panel-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.5);
+}
+
+/* High contrast mode scrollbar */
+.high-contrast .node-panel-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.high-contrast .node-panel-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Base accessibility improvements */
+*:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* High contrast mode */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Force black background on all elements except buttons and React Flow elements */
+.high-contrast *:not(button):not(a[role="button"]):not(a[href="/app"]):not([class*="react-flow"]):not([class*="react-flow"] *),
+.high-contrast *::before,
+.high-contrast *::after {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Override specific background classes */
+.high-contrast .bg-white,
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast [class*="bg-gradient-to-"] {
+  background: #000000 !important;
+  background-image: none !important;
+}
+
+/* Links */
+.high-contrast a:not([role="button"]):not([href="/app"]) {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.high-contrast a:not([role="button"]):not([href="/app"]):visited {
+  color: #ffffff !important;
+}
+
+/* Buttons */
+.high-contrast button,
+.high-contrast .button,
+.high-contrast a[role="button"],
+.high-contrast a[href="/app"] {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  outline: none !important;
+  transition: all 0.2s ease-in-out !important;
+  text-decoration: none !important;
+}
+
+/* Button hover states */
+.high-contrast button:hover,
+.high-contrast .button:hover,
+.high-contrast a[role="button"]:hover,
+.high-contrast a[href="/app"]:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Form elements */
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Override all Tailwind text classes */
+.high-contrast [class*="text-"] {
+  color: #ffffff !important;
+}
+
+/* Override all Tailwind border classes */
+.high-contrast [class*="border-"] {
+  border-color: #ffffff !important;
+}
+
+/* Focus states */
+.high-contrast *:focus {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 3px !important;
+}
+
+/* React Flow specific styles */
+.high-contrast .react-flow {
+  background-color: #000000 !important;
+}
+
+/* Node styles */
+.high-contrast .react-flow__node {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.high-contrast .react-flow__node-custom {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .react-flow__node * {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+/* Edge styles */
+.high-contrast .react-flow__edge {
+  stroke: #ffffff !important;
+  stroke-width: 3px !important;
+}
+
+.high-contrast .react-flow__edge-path {
+  stroke: #ffffff !important;
+  stroke-width: 3px !important;
+}
+
+.high-contrast .react-flow__edge-text {
+  fill: #ffffff !important;
+}
+
+.high-contrast .react-flow__edge-textbg {
+  fill: #000000 !important;
+}
+
+.high-contrast .react-flow__arrowhead {
+  fill: #ffffff !important;
+}
+
+.high-contrast .react-flow__handle {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast .react-flow__controls {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.high-contrast .react-flow__controls button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Icons */
+.high-contrast svg {
+  color: #ffffff !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+}
+
+/* Icons in buttons */
+.high-contrast button:hover svg,
+.high-contrast .button:hover svg,
+.high-contrast a[role="button"]:hover svg,
+.high-contrast a[href="/app"]:hover svg {
+  color: #000000 !important;
+}
+
+/* Code blocks */
+.high-contrast pre,
+.high-contrast code {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Disabled states */
+.high-contrast *:disabled {
+  opacity: 0.5;
+  border-color: #ffffff !important;
+}
+
+/* Placeholders */
+.high-contrast ::placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+
+/* Selection */
+.high-contrast ::selection {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Focus visible */
+.high-contrast *:focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 3px !important;
+}
+
+/* Ensure text remains visible during webfont load */
+html {
+  font-display: swap;
+}
+
+/* Improve text readability */
+body {
+  line-height: 1.6;
+  letter-spacing: 0.015em;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

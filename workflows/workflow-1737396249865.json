@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "id": "Webhook-1",
+      "type": "custom",
+      "position": {
+        "x": 212,
+        "y": 100.5999984741211
+      },
+      "data": {
+        "label": "Webhook",
+        "icon": "Webhook",
+        "category": "trigger",
+        "config": {}
+      }
+    },
+    {
+      "id": "Database-2",
+      "type": "custom",
+      "position": {
+        "x": 597.3820681289551,
+        "y": 100.44935728721575
+      },
+      "data": {
+        "label": "Database",
+        "icon": "Database",
+        "category": "connector",
+        "config": {}
+      }
+    },
+    {
+      "id": "Choice-3",
+      "type": "custom",
+      "position": {
+        "x": 406.7314947671039,
+        "y": 103.06100897710414
+      },
+      "data": {
+        "label": "Choice",
+        "icon": "GitBranch",
+        "category": "choice",
+        "config": {}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-Webhook-1-Choice-3",
+      "source": "Webhook-1",
+      "target": "Choice-3"
+    },
+    {
+      "id": "reactflow__edge-Choice-3-Database-2",
+      "source": "Choice-3",
+      "target": "Database-2",
+      "data": {
+        "condition": "g"
+      }
+    }
+  ]
+}

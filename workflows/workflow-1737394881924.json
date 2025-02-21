@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "id": "Webhook-1",
+      "type": "custom",
+      "position": {
+        "x": -20,
+        "y": 146.0999984741211
+      },
+      "data": {
+        "label": "Webhook",
+        "icon": "Webhook",
+        "category": "trigger",
+        "config": {
+          "method": "POST"
+        }
+      }
+    },
+    {
+      "id": "Database-2",
+      "type": "custom",
+      "position": {
+        "x": 381.6635058996713,
+        "y": 50.7875144767103
+      },
+      "data": {
+        "label": "Database",
+        "icon": "Database",
+        "category": "connector",
+        "config": {
+          "operation": "query",
+          "query": "57u7yb"
+        }
+      }
+    },
+    {
+      "id": "Choice-3",
+      "type": "custom",
+      "position": {
+        "x": 177.17939098786843,
+        "y": 139.80041447961884
+      },
+      "data": {
+        "label": "Choice",
+        "icon": "GitBranch",
+        "category": "choice",
+        "config": {}
+      }
+    },
+    {
+      "id": "REST API-4",
+      "type": "custom",
+      "position": {
+        "x": 386.30307510054007,
+        "y": 208.1796798958507
+      },
+      "data": {
+        "label": "REST API",
+        "icon": "Braces",
+        "category": "connector",
+        "config": {
+          "method": "POST",
+          "url": "ffffffffffff"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-Webhook-1-Choice-3",
+      "source": "Webhook-1",
+      "target": "Choice-3"
+    },
+    {
+      "id": "reactflow__edge-Choice-3-Database-2",
+      "source": "Choice-3",
+      "target": "Database-2",
+      "data": {
+        "condition": "i"
+      }
+    },
+    {
+      "id": "reactflow__edge-Choice-3-REST API-4",
+      "source": "Choice-3",
+      "target": "REST API-4",
+      "data": {
+        "condition": ""
+      }
+    }
+  ]
+}

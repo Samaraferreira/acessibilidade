@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "Webhook-1",
+      "type": "custom",
+      "position": {
+        "x": 169,
+        "y": 188.5999984741211
+      },
+      "data": {
+        "label": "Webhook",
+        "icon": "Webhook",
+        "category": "trigger",
+        "config": {
+          "method": "GET"
+        }
+      }
+    },
+    {
+      "id": "Transform-2",
+      "type": "custom",
+      "position": {
+        "x": 369,
+        "y": 188.64999771118164
+      },
+      "data": {
+        "label": "Transform",
+        "icon": "Code",
+        "category": "transformation",
+        "config": {
+          "transform": "d"
+        }
+      }
+    },
+    {
+      "id": "Choice-3",
+      "type": "custom",
+      "position": {
+        "x": 563,
+        "y": 187.14999771118164
+      },
+      "data": {
+        "label": "Choice",
+        "icon": "GitBranch",
+        "category": "choice",
+        "config": {}
+      }
+    },
+    {
+      "id": "REST API-5",
+      "type": "custom",
+      "position": {
+        "x": 821.1143322092657,
+        "y": 277.16017709591785
+      },
+      "data": {
+        "label": "REST API",
+        "icon": "Braces",
+        "category": "connector",
+        "config": {
+          "method": "POST"
+        }
+      }
+    },
+    {
+      "id": "Database-5",
+      "type": "custom",
+      "position": {
+        "x": 814.5292519761405,
+        "y": 173.13370898291643
+      },
+      "data": {
+        "label": "Database",
+        "icon": "Database",
+        "category": "connector",
+        "config": {}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-Webhook-1-Transform-2",
+      "source": "Webhook-1",
+      "target": "Transform-2"
+    },
+    {
+      "id": "reactflow__edge-Transform-2-Choice-3",
+      "source": "Transform-2",
+      "target": "Choice-3"
+    },
+    {
+      "id": "reactflow__edge-Choice-3-REST API-5",
+      "source": "Choice-3",
+      "target": "REST API-5",
+      "data": {
+        "condition": "data.status === 'success'"
+      }
+    },
+    {
+      "id": "reactflow__edge-Choice-3-Database-5",
+      "source": "Choice-3",
+      "target": "Database-5",
+      "data": {
+        "condition": ""
+      }
+    }
+  ],
+  "id": "workflow-1737394594858",
+  "createdAt": "2025-01-20T18:25:03.153Z",
+  "modifiedAt": "2025-01-20T19:22:15.997Z"
+}

@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "Webhook-1",
+      "type": "custom",
+      "position": {
+        "x": 169,
+        "y": 188.5999984741211
+      },
+      "data": {
+        "label": "Webhook",
+        "icon": "Webhook",
+        "category": "trigger",
+        "config": {}
+      }
+    },
+    {
+      "id": "Transform-2",
+      "type": "custom",
+      "position": {
+        "x": 369,
+        "y": 188.64999771118164
+      },
+      "data": {
+        "label": "Transform",
+        "icon": "Code",
+        "category": "transformation",
+        "config": {}
+      }
+    },
+    {
+      "id": "Choice-3",
+      "type": "custom",
+      "position": {
+        "x": 563,
+        "y": 187.14999771118164
+      },
+      "data": {
+        "label": "Choice",
+        "icon": "GitBranch",
+        "category": "choice",
+        "config": {}
+      }
+    },
+    {
+      "id": "Database-4",
+      "type": "custom",
+      "position": {
+        "x": 823.3879070590312,
+        "y": 152.8714186420652
+      },
+      "data": {
+        "label": "Database",
+        "icon": "Database",
+        "category": "connector",
+        "config": {}
+      }
+    },
+    {
+      "id": "REST API-5",
+      "type": "custom",
+      "position": {
+        "x": 821.1143322092657,
+        "y": 277.16017709591785
+      },
+      "data": {
+        "label": "REST API",
+        "icon": "Braces",
+        "category": "connector",
+        "config": {}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-Webhook-1-Transform-2",
+      "source": "Webhook-1",
+      "target": "Transform-2"
+    },
+    {
+      "id": "reactflow__edge-Transform-2-Choice-3",
+      "source": "Transform-2",
+      "target": "Choice-3"
+    },
+    {
+      "id": "reactflow__edge-Choice-3-Database-4",
+      "source": "Choice-3",
+      "target": "Database-4",
+      "data": {
+        "condition": ""
+      }
+    },
+    {
+      "id": "reactflow__edge-Choice-3-REST API-5",
+      "source": "Choice-3",
+      "target": "REST API-5",
+      "data": {
+        "condition": ""
+      }
+    }
+  ]
+}
