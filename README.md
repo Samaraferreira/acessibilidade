@@ -160,6 +160,22 @@ PUT /workflows/:id
 DELETE /workflows/:id
 ```
 
+## Accessibility
+
+This project follows the **Web Content Accessibility Guidelines (WCAG)** to ensure an inclusive experience for all users. Some of the practices and tools used include:
+
+### Adopted Practices
+- Use of semantic HTML tags to improve page structure.
+- Implementation of ARIA attributes to enhance the accessibility of dynamic elements.
+- Contrast and text size adjustments to ensure proper readability.
+- Language definition (`lang` in HTML) for compatibility with screen readers.
+- Dynamic language switching (PT/EN) via an easily accessible button.
+
+### Tools Used
+- Lighthouse: Google's tool for accessibility auditing.
+- Wave: A tool for analyzing and validating web accessibility.
+
+
 ## License
 
 MIT
